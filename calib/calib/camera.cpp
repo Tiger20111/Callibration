@@ -10,7 +10,9 @@ void Camera::recordVideo() {
 
 	int frame_width = vcap.get(CV_CAP_PROP_FRAME_WIDTH);
 	int frame_height = vcap.get(CV_CAP_PROP_FRAME_HEIGHT);
-	VideoWriter video("C:/Users/Tiger20111/Videos/out.mkv", CV_FOURCC('M', 'J', 'P', 'G'), 30, Size(frame_width, frame_height), true);
+	VideoWriter video("C:/Users/Tiger20111/Videos/out111.avi", CV_FOURCC('X', 'V', 'I', 'D'), 15, Size(1280, 720), true);
+	vcap.set(CV_CAP_PROP_FRAME_WIDTH, 1280);
+	vcap.set(CV_CAP_PROP_FRAME_HEIGHT, 720);
 	clock_t t0 = clock();
 
 	for (;;) {
